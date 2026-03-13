@@ -218,14 +218,9 @@ return (
 
 export default Companies
 
+import companiesData from "../assets/companies.json";
+
 export const companyLoader = async () => {
-
-const res = await fetch("http://localhost:3000/companies")
-
-if (!res.ok) {
-throw Error("Failed to fetch companies");
-}
-
-return res.json();
-
+  // Use bundled JSON rather than a localhost API so the app works on GitHub Pages.
+  return companiesData.companies ?? [];
 }
