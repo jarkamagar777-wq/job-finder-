@@ -111,6 +111,10 @@ export default function SamuraiJobBoard() {
         
       </Route>,
     ),
+    {
+      // Match the GitHub Pages repo path. This keeps routing working when deployed.
+      basename: '/job-finder-/',
+    },
   );
 
   return (
